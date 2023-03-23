@@ -2,7 +2,7 @@ import React from "react";
 
 const myStyle = {
     color: 'purple',
-    backgroundColor: 'lightblue',
+    backgroundColor: 'lightblue'
     };
     
 function Index(props){ // props passed is pokemon 

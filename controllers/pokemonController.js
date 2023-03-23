@@ -25,7 +25,9 @@ module.exports.new = (req, res) => {
 module.exports.create = (req, res) => {
     console.log('POST /pokemon')
     console.log(req.body)
-    res.send('data recieved')
+    pokemon.push(req.body)
+    // res.send('data recieved')
+    res.redirect('/pokemon')
 
 }
 // module.exports = { index, show }  // not needed anymore 
