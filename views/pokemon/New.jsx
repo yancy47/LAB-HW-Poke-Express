@@ -7,10 +7,17 @@ function New(){ // props passed is pokemon
             <form action = "/pokemon" method ='POST'>
                 <label htmlFor="nme">Name:</label><br />
                 <input type="text" id="nme" name="name" /><br /><br />
+
+                <label htmlFor="img">Image:</label><br />
+                <input type="text" id="img" name="img" /><br /><br />
+            
                 <button>Submit</button>
             </form>
         </div>
+        
     )
 }
 
 export default New;
+
+//

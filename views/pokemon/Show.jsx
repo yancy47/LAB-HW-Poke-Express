@@ -1,13 +1,25 @@
 import React from "react";
-import pokemon from "../../models/pokemon";
+import DefaultLayout from "../layouts/DefaultLayout";
 
 function Show(props) {
     return(
-        <div>
+        <DefaultLayout title="Show View">
         <h1>Gotta Catch 'Em All'</h1>
         <h2>{props.pokemon.name}</h2>
-        <img src={`${props.pokemon.img}.jpg`} alt={props.pokemon.name}></img>
+        <img src={`${props.pokemon.img}.jpg`} alt='pokemon img'></img>
         <br />
+
+         <a href={`/pokemon/${props.pokemon._id}/edit`}>Edit</a>
+            <br /><br />
+
+
+        <form action={`/pokemon/${props.pokemon._id}?_method=DELETE`} method="POST">
+            <button>Delete</button>
+            <br />
+
+        </form> 
+
+
         <a href='/pokemon/'>Back</a>
         {/* <ul>
             {props.pokemon.map((pokemon, x) => 
@@ -16,7 +28,7 @@ function Show(props) {
                 </li>
             )}
         </ul> */}
-    </div>
+    </DefaultLayout>
     )
 }
 export default Show;

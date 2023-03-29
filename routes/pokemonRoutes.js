@@ -46,8 +46,23 @@ router.get('/', pokemonController.index)
 // Setup a "new" route for creating pokemon
 router.get('/new', pokemonController.new)
 
+// Setup a "clear" route for removing all data from pokemon collection
+router.delete('/clear', pokemonController.clear)
+
+// Setup a "delete" route for removing a specific pokemon
+router.delete('/:id', pokemonController.delete)   
+
+// Setup a "update" route for updating a specific pokemon
+router.put('/:id', pokemonController.update)
+
+// Setup a "seed" route for repopulating our database
+router.post('/seed', pokemonController.seed)        
+
 // Setup a "create" route for adding pokemon data
 router.post('/', pokemonController.create)
+
+// Setup a "edit" route for editing a pokemeon
+router.get('/:id/edit', pokemonController.edit)
 
 // Setup an "show" route for pokemon, attach it to router along with the controller logic
 router.get('/:id', pokemonController.show)     
